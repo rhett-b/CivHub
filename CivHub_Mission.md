@@ -1,4 +1,4 @@
-# CivHub Manifesto  
+# CivHub Mission & Core Tenets  
 
 **CivHub** is built on the belief that information should be free, governance should be transparent, and communities should have the tools to engage meaningfully in shaping their future.  
 
