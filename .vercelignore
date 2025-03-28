@@ -1,0 +1,2 @@
+# Ignore AI scripts and data-heavy references during build
+/ai/
