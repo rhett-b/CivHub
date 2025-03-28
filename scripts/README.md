@@ -1,29 +1,24 @@
-# CivHub AI
+# CivHub Analysis Scripts
 
-This folder contains AI-assisted scripts and data analysis tools for CivHub.
+This folder contains all Python scripts used to generate automated insights from public datasets for CivHub. These scripts power the charts and findings featured in our [Insights](https://civhub.us/insights) page.
 
-## Overview
+Each script is built for transparency and replicability.
 
-CivHub is designed to uncover insights from public government datasets—starting with New York State budget data. These scripts help process, summarize, and visualize raw data so citizens can better understand how money is spent, what trends emerge, and where action is needed.
+## Scripts Included
 
-## Scripts
+- `budget_function_summary.py`  
+  ➤ Generates historical budget visualizations by function across NY State.
 
-### `budget_function_summary.py`
-- Parses the raw NY State budget CSV
-- Cleans and converts 2023-24 actual budget values
-- Groups totals by "Function" (e.g., Education, Health, Infrastructure)
-- Outputs a sorted bar chart of the top 10 funding areas
+- `epa_facility_summary.py`  
+  ➤ Tallies EPA-registered facilities by NY County.
 
-## How to Run
-This script can be run in [Google Colab](https://colab.research.google.com/), a free browser-based Python environment.
+- `epa_poverty_meta.py`  
+  ➤ Cross-analyzes county-level poverty data and EPA facility distribution to explore correlations in environmental burden and socioeconomic hardship.
 
-1. Open a new notebook
-2. Paste the full script
-3. Run each cell
-4. View chart and data summary
+## How to Use
 
-## Future Plans
-- Compare trends over multiple years
-- Add outlier detection and alert logic
-- Develop more robust visual dashboards
-- Integrate insights directly into CivHub’s public-facing site
+1. Clone the CivHub GitHub repo.
+2. Ensure you have Python 3 and required packages (`pandas`, `matplotlib`) installed.
+3. Run any script using:
+   ```bash
+   python scriptname.py
