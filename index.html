@@ -1,16 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><link rel="stylesheet" href="style.css">
-  <meta charset="UTF-8" />
+<head>
+  <meta charset="UTF-8">
   <title>CivHub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Welcome to CivHub</h1>
-  <p>CivHub is an open-source, AI-powered platform designed to make local governance transparent, participatory, and future-forward. Our first testbed is Westchester County, NY—helping citizens see where money flows, how decisions are made, and how we can collectively do better.</p>
-  <nav>
-    <a href="about.html">About</a> |
-    <a href="insights.html">Insights</a> |
-    <a href="get-involved.html">Get Involved</a>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-left"><a href="index.html">CivHub</a></div>
+    <div class="nav-right"><a href="about.html">About</a></div>
   </nav>
+
+  <!-- INSIGHT FEED -->
+  <main class="feed">
+    <section class="insight">
+      <h3>🧠 Meta Insight #002 – March 30, 2025</h3>
+      <p>Counties with both high environmental facility density and elevated poverty rates—like Bronx and Kings—show a troubling pattern of disproportionate environmental burden on low-income communities.</p>
+      <img src="images/meta_environmental_burden_vs_population.png" alt="Environmental burden vs population" width="600">
+    </section>
+
+    <section class="insight">
+      <h3>🧠 Insight #008 – March 29, 2025</h3>
+      <p>Westchester’s child poverty rate (11.2%) is significantly higher than that of working-age adults (8.2%) or seniors (9.1%).</p>
+      <img src="images/poverty_by_age_westchester.png" alt="Poverty by age" width="600">
+    </section>
+
+    <section class="insight">
+      <h3>🧠 Meta Insight #001 – March 28, 2025</h3>
+      <p>Counties with more EPA-registered facilities also tend to have higher poverty rates, suggesting a correlation between environmental burden and economic inequality.</p>
+      <img src="images/epa_vs_poverty_scatter.png" alt="Scatterplot of EPA facilities vs poverty rate" width="600">
+    </section>
+
+    <section class="insight">
+      <h3>🧠 Insight #007 – March 28, 2025</h3>
+      <p>Social Services, the second most funded NY budget category, has seen steady year-over-year increases since 2020—totaling nearly $21 billion last year.</p>
+      <img src="images/social_services_growth.png" alt="Social Services funding growth" width="600">
+    </section>
+
+    <section class="insight">
+      <h3>🧠 Insight #006 – March 28, 2025</h3>
+      <p>Transportation and Parks & Recreation saw the biggest cuts in the 2024 NY State Budget, with over $500 million in reduced funding.</p>
+      <img src="images/budget_cuts_2024.png" alt="NY Budget Cuts 2024" width="600">
+    </section>
+
+    <!-- Add earlier insights here if you’d like -->
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/rhett-b/CivHub" target="_blank">GitHub</a> ·
+      <a href="https://substack.com/@civhub" target="_blank">Substack</a> ·
+      <a href="https://medium.com/@civhubus" target="_blank">Medium</a> ·
+      <a href="https://bsky.app/profile/civhub.bsky.social" target="_blank">Bluesky</a> ·
+      <a href="https://discord.gg/BAQxDSwz" target="_blank">Discord</a> ·
+      <a href="mailto:civhubus@gmail.com">Email</a>
+    </div>
+    <div class="footer-copy">© 2025 CivHub. All rights reserved.</div>
+  </footer>
+
 </body>
 </html>
