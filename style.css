@@ -1,36 +1,31 @@
 /* Helvetica Neue Font Faces */
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url('fonts/HelveticaNeue-Regular.ttf') format('truetype');
+  src: url('fonts/HelveticaNeueLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Neue';
+  src: url('fonts/HelveticaNeue.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Helvetica Neue';
-  src: url('fonts/HelveticaNeue-Bold.ttf') format('truetype');
+  src: url('fonts/HelveticaNeueBold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
 }
+
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background-color: #ffffff;
-  color: #000000;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.6;
-  margin: 0;
-  padding: 2rem;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+h1, h2, h3, h4 {
   font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  text-transform: none; /* Keeps sentence case */
 }
 
-p {
-  margin-bottom: 1rem;
-}
