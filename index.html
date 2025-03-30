@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CivHub</title>
+  <title>CivHub – Insights</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
@@ -44,6 +44,12 @@
       max-width: 800px;
       margin: 0 auto;
     }
+    body .feed {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 2em;
+    }
     .insight {
       margin-bottom: 3em;
     }
@@ -71,13 +77,17 @@
     </div>
   </nav>
 
-  <!-- INTRO TEXT -->
+  <!-- HEADER -->
   <div class="header-blurb">
     <p><strong>CivHub</strong> is an open-source platform for mapping governance data, providing transparent insights, and building a decentralized model for civic engagement.</p>
     <p style="margin-top: 2em; border-top: 1px solid #000; padding-top: 1em;">We're starting by focusing on New York and Westchester-area data to build foundational insights. More cities and states to follow.</p>
   </div>
 
-<!-- Meta Insight #002 -->
+  <!-- FEED -->
+  <div class="feed">
+     <h2 style="margin-top: 3rem;">Insights from New York State & Westchester County</h2>
+
+    <!-- Meta Insight #002 -->
 <div class="insight">
   <h3>Meta Insight 002 – March 29, 2025</h3>
 <p>Some of New York's <strong>most populous counties</strong> also host the <strong>largest number of EPA-monitored facilities</strong>. This clustering suggests that environmental oversight efforts are concentrated in high-density urban areas—an important overlap when considering environmental justice policy.</p>
@@ -176,6 +186,8 @@ Data: <a href="https://www.dropbox.com/scl/fi/wxubcni1o1vle3ydglsv6/ny_state_bud
 Source: <a href="https://www.budget.ny.gov" target="_blank">NY State Budget</a> | 
 Data: <a href="https://www.dropbox.com/scl/fi/wxubcni1o1vle3ydglsv6/ny_state_budget_cleaned.csv?rlkey=ltmxm4mzo2snk5tpm4s16ue2y&raw=1" target="_blank">Cleaned CSV</a></small>
 
+</div> <!-- closes last .insight -->
+  
 </div> <!-- end .feed -->
 
   <!-- FOOTER -->
