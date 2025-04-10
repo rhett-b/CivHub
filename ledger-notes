@@ -1,0 +1,24 @@
+<!-- Ledger-Notes Page -->
+<div class="ledger-notes">
+  <h1>Ledger-Notes</h1>
+  <p class="lede">Long and short-form reflections on the systems we live in — and what they reveal when we look closely.</p>
+
+<!-- Ledger-Note 002 -->
+<div class="ledger-note">
+  <h2>Quick Note: When Links Break, Trust Does Too</h2>
+  <p class="date">Published April 10, 2025</p>
+  <p class="summary">
+    Over 25% of U.S. government URLs break within five years. It's not just an inconvenience — it's a slow erosion of public memory and access. When critical information disappears from the public web, it becomes harder to hold institutions accountable, or even understand how decisions were made. Digital decay is a policy problem in disguise.
+  </p>
+</div>
+
+  <!-- Ledger-Note 001 -->
+<div class="ledger-note">
+  <h2>The Interface is the Institution</h2>
+  <p class="date">Published April 7, 2025</p>
+  <p class="summary">Why good design is the foundation of civic trust. A longform look at public infrastructure, digital decay, and the role of human-centered design in public life.</p>
+  <a href="/ledger-notes/interface-is-institution">Read full essay →</a>
+</div>
+
+  <!-- Add more entries below -->
+</div>
