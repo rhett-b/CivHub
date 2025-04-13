@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>CivHub – Insights</title>
+  <title>About – CivHub</title>
   <link rel="stylesheet" href="style.css">
   <style>
     body {
       font-family: 'Helvetica Neue', sans-serif;
       margin: 0;
       padding: 0;
+      align-items: center;
       background: #fff;
       color: #000;
     }
@@ -32,26 +33,21 @@
       margin-left: 1em;
       font-weight: normal;
     }
-    .header-blurb {
+    .about-content {
       padding: 2em;
       max-width: 800px;
       margin: 0 auto;
-      line-height: 1.4;
+      line-height: 1.6;
       font-size: 1rem;
     }
-    .feed {
-      padding: 2em;
-      max-width: 800px;
-      margin: 0 auto;
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5em;
     }
-    body .feed {
-      max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 2em;
-    }
-    .insight {
-      margin-bottom: 3em;
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 2em;
+      margin-bottom: 0.5em;
     }
     .footer {
       padding: 2em;
@@ -68,92 +64,51 @@
 </head>
 <body>
 
-<!-- CivHub Navigation -->
-<nav style="display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background: #fff; font-family: Helvetica, sans-serif; font-size: 1rem; border-bottom: 1px solid #e0e0e0;">
-  <div style="font-weight: bold;">
-    <a href="/index.html" style="text-decoration: none; color: #000;">CivHub</a>
+  <div class="nav">
+    <a href="index.html">CivHub</a>
+    <div class="nav-right">
+      <a href="policy-receipts.html">Policy Receipts</a>
+      <a href="insights.html">Insights</a>
+      <a href="ledger-notes.html">Ledger Notes</a>
+      <a href="about.html">About</a>
+    </div>
   </div>
-  <div style="display: flex; gap: 1.5rem;">
-    <a href="/policy-receipts.html" style="text-decoration: none; color: #000;">Receipts</a>
-    <a href="/insights.html" style="text-decoration: none; color: #000;">Insights</a>
-    <a href="/ledger-notes.html" style="text-decoration: none; color: #000;">Ledger Notes</a>
-    <a href="/about.html" style="text-decoration: none; color: #000;">About</a>
+
+  <div class="about-content">
+    <h1>About CivHub</h1>
+    <p>
+      CivHub is an open-source civic platform designed to make public systems readable — to build civic trust through transparency, design, and data.
+    </p>
+
+    <h2>Our Mission</h2>
+    <p>
+      We believe that <strong>public data is a public good</strong>, and that <strong>you can’t participate in what you can’t understand</strong>. CivHub is built on the belief that good governance begins with good design.
+    </p>
+
+    <h2>What We’ve Built</h2>
+    <p>
+      Our current platform includes:
+      <ul>
+        <li><strong>Insights:</strong> Bite-sized findings on budgets, housing, labor, and more.</li>
+        <li><strong>Ledger Notes:</strong> Deeper reflections, hypotheses, and commentary.</li>
+        <li><strong>Policy Receipts (beta):</strong> A tool to generate easy-to-read summaries of policy impacts using real data.</li>
+      </ul>
+    </p>
+
+    <h2>Where We’re Going</h2>
+    <p>
+      Our long-term vision is to build a civic operating system — a stack of tools for data legibility, public comprehension, and meaningful participation. From AI-assisted policy simulations to citizen-generated datasets, CivHub aims to evolve how we govern in the digital age.
+    </p>
+
+    <h2>Want to Get Involved?</h2>
+    <p>
+      We’re looking to connect with technologists, designers, civic thinkers, and public servants. If you're interested in contributing or collaborating, <a href="mailto:hello@civhub.us">get in touch</a>.
+    </p>
   </div>
-</nav>
-  
- <ul>
-  <meta charset="UTF-8" />
-  <title>About CivHub</title>
-</head>
-<body>
-  <p>CivHub</strong> is built on the idea that transparent, accessible data is a core component of a functioning democracy. We're creating an AI-first civic platform that lets everyday citizens engage with their governments in ways never before possible.</p>
 
-  <ul>
-  <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Get Involved</title>
-</head>
-<body>
+  <div class="footer">
+    © 2025 CivHub. All rights reserved.
   </div>
-  <p>We’re building a community of people who care about the future of democracy, data, and technology.</p>
-  <ul>
-    <a href="https://substack.com/@civhub" target="_blank">Subscribe on Substack</a></li>
-    <p>
-    <a href="https://github.com/rhett-b/CivHub" target="_blank">Explore the GitHub Repo</a></li>
-    <p>
-    <a href="https://medium.com/@civhubus" target="_blank">Check out our Medium</a></li>
-    <p>
-    Email us: <a href="mailto:civhubus@gmail.com">civhubus@gmail.com</a></li>
-  </ul>
-  
-  <p><strong>Core goals:</strong></p>
-  <ul>
-    <li>Transparency and open access to government data</li>
-    <li>Accountability through AI-driven insights</li>
-    <li>Decentralization and resistance to corruption</li>
-  </ul>
 
-  <p><a href="https://github.com/rhett-b/CivHub/blob/main/CivHub_Mission.md" target="_blank">Read the CivHub Mission</a></p>
- 
-  <p>
-  <h2 style="font-size: 1.2rem; margin-top: 2rem;">🚧 CivHub Roadmap (MVP Phase)</h2>
-
-<h3 style="font-size: 1rem; margin-top: 1.5rem;">🔹 Phase 1 – Pilot Insights (Now Live)</h3>
-<ul>
-  <li>Initial analysis of NY State + Westchester County data</li>
-  <li>Visual civic insights published to <a href="https://www.civhub.us" target="_blank">civhub.us</a></li>
-  <li>Launch Ledger-Notes: Posts to explore and connect our insights</li>
-</ul>
-
-<h3 style="font-size: 1rem; margin-top: 1.5rem;">🔹 Phase 2 – Platform Foundation (In Progress)</h3>
-<ul>
-  <li>Build early data-to-insight processing pipeline</li>
-  <li>Expand dataset coverage: public safety, environment, education</li>
-  <li>Refine visual system + feed UX</li>
-  <li>Outreach to collaborators, funders, and civic technologists</li>
-</ul>
-
-<h3 style="font-size: 1rem; margin-top: 1.5rem;">🔹 Phase 3 – Participatory Infrastructure (Coming Soon)</h3>
-<ul>
-  <li>Launch feedback loop: comments, public flags, community ratings</li>
-  <li>Begin prototyping trust-ranked insight engine</li>
-  <li>Lay groundwork for decentralized & federated system</li>
-</ul>
-
-<h3 style="font-size: 1rem; margin-top: 1.5rem;">🔹 Phase 4 – Scalable Civic Toolkit (Future State)</h3>
-<ul>
-  <li>Support more cities and states</li>
-  <li>Develop action layers (e.g. contact reps, propose alternatives)</li>
-  <li>Partner with grassroots orgs and institutions to co-build new modules</li>
-</ul>
-
-<div style="margin-bottom: 2rem;"></div>
-
-  <!-- FOOTER -->
-   <footer class="footer">
-     <div class="footer-copy">© 2025 CivHub. All rights reserved.</div>
-   </footer>
- 
- </body>
- </html>
+</body>
+</html>
