@@ -1,6 +1,10 @@
 # CivHub Mission & Core Tenets  
 
-**CivHub** is built on the belief that information should be free, governance should be transparent, and communities should have the tools to engage meaningfully in shaping their future.  
+**Mission**
+CivHub is a public-minded digital platform that transforms complex civic data into accessible, trustworthy insights—empowering citizens, public servants, and institutions alike to navigate governance with clarity and confidence.
+
+**Vision**
+We envision a world where the digital layer of democracy is as legible and accountable as the values it claims to uphold—designed not to displace public institutions, but to reinforce and reimagine them in the public’s interest. 
 
 ## **Core Tenets**  
 
