@@ -86,7 +86,7 @@
 <div class="container">
   <h1>Policy Receipt Generator</h1>
   <h2 style="font-size: 1rem; font-weight: normal; text-align: center;">
-    Make Public Power Visible.<br>
+    Make Power Visible.<br>
     Generate a Civic Receipt for Any Policy.
   </h2>
 
@@ -130,6 +130,46 @@
     </div>
   </div>
 </div>
-  <script src="receipts.js"></script>
+
+<script>
+  function loadReceipt(key) {
+    const data = receipts.find(r => r.key === key);
+    if (!data) return;
+
+    document.getElementById("policyName").textContent = data.policy_name;
+    document.getElementById("summary").textContent = data.summary;
+    document.getElementById("score").innerHTML = `<span style='color:${data.civhub_score.color};'>${data.civhub_score.score} ${data.civhub_score.trend}</span>`;
+
+    const impact = document.getElementById("impactList");
+    impact.innerHTML = "";
+    data.impact_breakdown.forEach(i => {
+      const li = document.createElement("li");
+      li.innerHTML = `<strong>${i.category}</strong>: ${i.insight}`;
+      impact.appendChild(li);
+    });
+
+    document.getElementById("methodology").textContent = data.methodology;
+
+    const disclosures = document.getElementById("disclosures");
+    disclosures.innerHTML = "";
+    data.disclosures.forEach(d => {
+      const li = document.createElement("li");
+      li.textContent = d;
+      disclosures.appendChild(li);
+    });
+
+    const sources = document.getElementById("sources");
+    sources.innerHTML = "";
+    data.sources.forEach(s => {
+      const li = document.createElement("li");
+      li.innerHTML = `<a href="${s}" target="_blank">${s}</a>`;
+      sources.appendChild(li);
+    });
+  }
+
+  // Load default
+  window.onload = () => loadReceipt("local-law-97");
+</script>
+
 </body>
 </html>
