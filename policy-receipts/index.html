@@ -102,46 +102,106 @@
   <input type="text" id="policyInput" placeholder="Enter a policy or law (e.g. Local Law 97)">
   <button onclick="generateReceipt()">Generate Receipt</button>
 
- <!-- Local Law 97 Receipt Content -->
+<!-- DYNAMIC POLICY RECEIPT UI -->
 <div class="receipt" id="receipt" style="display: block;">
-  <h2 style="font-size: 1.3rem; margin-bottom: 0.5rem;">Local Law 97 (NYC)</h2>
-  <div style="font-size: 1rem; margin-bottom: 1.5rem;">Passed in 2019 as part of NYC's Climate Mobilization Act, Local Law 97 mandates large buildings reduce greenhouse gas emissions, targeting a 40% cut by 2030 and 80% by 2050.</div>
+  <h2 id="policyName"></h2>
+  <div id="summary" style="font-size: 1rem; margin-bottom: 1.5rem;"></div>
 
   <div style="margin-bottom: 1.5rem;">
-    <strong>CivHub Score:</strong> <span style="font-size: 1.2rem; color: #00ff00;">+72 ↑</span>
+    <strong>CivHub Score:</strong> 
+    <span id="score" class="score-line"></span>
   </div>
 
   <div style="margin-bottom: 2rem;">
     <strong>Impact Breakdown:</strong>
-    <ul style="list-style: none; padding-left: 1rem;">
-      <li>🌿 Environmental Benefit: Substantial projected reductions in GHG emissions from NYC's building sector.</li>
-      <li>💰 Economic Investment: Major building retrofits sparked new green jobs and demand for clean tech solutions.</li>
-      <li>🏛️ Governance: Implementation aligned with OneNYC and NYC Local Law 84 benchmarking frameworks.</li>
-      <li>⚡️ Compliance Strain: Some building owners voiced concerns over cost and deadline feasibility.</li>
-      <li>🚫 Equity Gaps: Environmental justice groups flagged potential pass-through costs to low-income tenants.</li>
-      <li>❓ Social Feedback: Incomplete data on public awareness and behavioral response to retrofits.</li>
-    </ul>
+    <ul id="impactList" style="list-style: none; padding-left: 1rem;"></ul>
   </div>
 
-  <div style="margin-bottom: 1.5rem;">
+  <div style="margin-bottom: 2rem;">
     <strong>Methodology:</strong>
-    <p style="font-size: 0.9rem; line-height: 1.4;">
-      This score was derived using CivHub's -100 to +100 scale across six weighted categories: Environmental, Economic, Governance, Equity, Social, and Data Integrity. Scores are calculated based on government emissions data, capital investment figures, public budget documents, and media analysis. Subjective elements are peer-reviewed and flagged transparently.
-    </p>
+    <p id="methodology" style="font-size: 0.9rem; line-height: 1.4;"></p>
   </div>
 
   <div style="margin-bottom: 2rem;">
     <strong>Disclosures:</strong>
-    <p style="font-size: 0.85rem; color: #ccc;">
-      Not all data was available at the parcel or building level. Feedback loops (e.g., energy usage changes post-retrofit) are not fully captured in current datasets. Analysis assumes ongoing compliance based on latest DOB enforcement rules (as of Dec 2024).
-    </p>
+    <ul id="disclosures" style="font-size: 0.85rem; color: #555;"></ul>
+  </div>
+
+  <div style="margin-bottom: 2rem;">
+    <strong>Sources:</strong>
+    <ul id="sources" style="font-size: 0.85rem;"></ul>
   </div>
 
   <div style="text-align: center; font-size: 0.85rem; color: #999;">
-    Policy Receipt Generator by <a href="https://civhub.us" style="color: #999; text-decoration: underline;">CivHub</a><br>
+    Policy Receipt Generator by <a href="https://civhub.us" target="_blank" style="color: #999; text-decoration: underline;">CivHub</a><br>
     © 2025 CivHub. All rights reserved.
   </div>
 </div>
+
+<script>
+const receiptData = {
+  policy_name: "Local Law 97 (NYC)",
+  summary: "Passed in 2019 as part of NYC’s Climate Mobilization Act, Local Law 97 mandates large buildings reduce greenhouse gas emissions by 40% by 2030 and 80% by 2050. This receipt evaluates early environmental data to assess implementation impact.",
+  civhub_score: {
+    score: 76,
+    scale: "-100 to +100",
+    trend: "↑",
+    color: "green"
+  },
+  impact_breakdown: [
+    { category: "🌿 Environmental", insight: "Summer 2023 ozone and PM2.5 levels decreased across key NYC zones (e.g., West Queens, South Crown Heights) compared to historical baselines, signaling early climate co-benefits." },
+    { category: "💰 Economic", insight: "Public records show large-scale retrofits and upgrades supporting NYC green construction employment and demand for high-efficiency systems." },
+    { category: "🏩 Governance", insight: "Linked with existing benchmarking laws (LL84) and city enforcement protocols. Supported by Local Law 97 Implementation Plan 2021." },
+    { category: "🚫 Equity", insight: "Environmental justice groups continue to monitor for displacement and rent pass-through concerns. No confirmed large-scale negative outcomes yet." },
+    { category: "⚡ Social/Behavioral", insight: "Public feedback and awareness remain limited. No current social survey data available in dataset." },
+    { category: "📉 Data Integrity", insight: "Source is NYC Open Data, via government-collected environmental indicators. However, data is periodic and limited to summer seasons." }
+  ],
+  methodology: "Score derived using CivHub’s six-factor policy impact framework (Environmental, Economic, Governance, Equity, Social, and Data Integrity), weighted equally unless otherwise noted. Environmental score primarily driven by reductions in ozone and particulate matter. Subjective elements flagged accordingly.",
+  disclosures: [
+    "Air quality data reflects summer-only readings. Full-year seasonal variance not accounted for.",
+    "Causal attribution between LL97 and air quality changes inferred via proximity, not experimental control.",
+    "Economic impact details are drawn from secondary documents and not directly sourced from CSV inputs.",
+    "Equity, social, and behavioral indicators lack granular demographic tagging."
+  ],
+  sources: [
+    "https://data.cityofnewyork.us/resource/c3uy-2p5r.csv",
+    "NYC Climate Mobilization Act 2019",
+    "Local Law 97 Summary (2023)",
+    "NYC LL97 Implementation Plan (2021)"
+  ]
+};
+
+// Populate DOM
+window.onload = () => {
+  document.getElementById("policyName").textContent = receiptData.policy_name;
+  document.getElementById("summary").textContent = receiptData.summary;
+  document.getElementById("score").innerHTML = `<span style='color:${receiptData.civhub_score.color};'>${receiptData.civhub_score.score} ${receiptData.civhub_score.trend}</span>`;
+
+  const impact = document.getElementById("impactList");
+  receiptData.impact_breakdown.forEach(i => {
+    const li = document.createElement("li");
+    li.innerHTML = `<strong>${i.category}</strong>: ${i.insight}`;
+    impact.appendChild(li);
+  });
+
+  document.getElementById("methodology").textContent = receiptData.methodology;
+
+  const disclosures = document.getElementById("disclosures");
+  receiptData.disclosures.forEach(d => {
+    const li = document.createElement("li");
+    li.textContent = d;
+    disclosures.appendChild(li);
+  });
+
+  const sources = document.getElementById("sources");
+  receiptData.sources.forEach(s => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="#" target="_blank">${s}</a>`;
+    sources.appendChild(li);
+  });
+};
+</script>
+
 
   <!-- Footer -->
   <div style="text-align: center; margin-top: 4rem; font-size: 0.8rem; color: #333;">
