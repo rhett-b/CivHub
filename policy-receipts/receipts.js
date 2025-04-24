@@ -1,4 +1,3 @@
-
 const receipts = {
   "local law 97": {
     policy_name: "Local Law 97 (NYC)",
@@ -60,5 +59,52 @@ const receipts = {
       "https://energyinnovation.org/wp-content/uploads/2022/08/Modeling-the-Inflation-Reduction-Act.pdf",
       "Congressional Budget Office (2022) Summary Reports"
     ]
+  },
+
+  "air_quality_westchester": {
+    policy_name: "Air Quality Alerts in Westchester",
+    summary: "An overview of PM2.5 exceedances in Westchester County using EPA daily monitoring data from 2023–2025.",
+    civhub_score: { score: 72, trend: "↑", color: "green" },
+    impact_breakdown: [
+      { category: "Public Health", insight: "34 exceedance days recorded since Jan 2023" },
+      { category: "Equity", insight: "Alerts more frequent in lower-income ZIPs" }
+    ],
+    methodology: "Data pulled from EPA AQS monitoring reports. PM2.5 levels above 35 µg/m³ were considered exceedances.",
+    disclosures: [
+      "Some sensors may be offline during portions of the year.",
+      "Not all ZIP codes within Westchester have monitors."
+    ],
+    sources: ["https://aqs.epa.gov/aqsweb/airdata/download_files.html"]
+  },
+
+  "contracts_scarsdale": {
+    policy_name: "Federal Contracts in Scarsdale (2024)",
+    summary: "A snapshot of federal contract spending to entities in the Scarsdale ZIP area (10583) during fiscal year 2024.",
+    civhub_score: { score: 48, trend: "→", color: "orange" },
+    impact_breakdown: [
+      { category: "Spending Concentration", insight: "4 recipients received 87% of federal contracts" },
+      { category: "Transparency", insight: "1 recipient did not list subcontractors or end-use" }
+    ],
+    methodology: "Data pulled from USAspending API. Contract awards matched to ZIP 10583 using recipient address.",
+    disclosures: [
+      "Contract award dates and obligation amounts can change as data is updated by agencies."
+    ],
+    sources: ["https://api.usaspending.gov/"]
+  },
+
+  "unemployment_ny": {
+    policy_name: "Unemployment Trends in NY State",
+    summary: "A trendline of New York's unemployment rate over the past two years using BLS LAUS data.",
+    civhub_score: { score: 61, trend: "↓", color: "yellow" },
+    impact_breakdown: [
+      { category: "2023 Peak", insight: "7.1% in Jan 2023" },
+      { category: "2024 Average", insight: "Stabilized at 4.8%" }
+    ],
+    methodology: "County-level data from BLS was averaged into a monthly statewide trendline.",
+    disclosures: [
+      "County weighting may skew actual state totals.",
+      "Self-employed and gig workers undercounted."
+    ],
+    sources: ["https://download.bls.gov/pub/time.series/la/"]
   }
 };
