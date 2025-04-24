@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>CivHub Policy Receipt Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="receipts.js"></script>
   <style>
     body {
       margin: 0;
@@ -24,18 +26,17 @@
       letter-spacing: 0.05em;
       margin-bottom: 1rem;
     }
-    input[type="text"] {
+    input[type="text"], select {
       width: 100%;
       padding: 0.5rem;
       font-family: monospace;
       font-size: 1rem;
-      border: none;
+      border: 1px dashed black;
       background: #f5f5f5;
       color: black;
-      border: 1px dashed black;
+      margin-bottom: 1rem;
     }
     button {
-      margin-top: 1rem;
       padding: 0.5rem 1rem;
       font-family: monospace;
       font-size: 1rem;
@@ -52,7 +53,6 @@
       border: 1px solid black;
       border-bottom: 12px solid black;
       clip-path: polygon(0 0, 100% 0, 100% 97%, 95% 100%, 90% 97%, 85% 100%, 80% 97%, 75% 100%, 70% 97%, 65% 100%, 60% 97%, 55% 100%, 50% 97%, 45% 100%, 40% 97%, 35% 100%, 30% 97%, 25% 100%, 20% 97%, 15% 100%, 10% 97%, 5% 100%, 0 97%);
-      display: none;
     }
     .receipt h2 {
       font-size: 1.5rem;
@@ -71,12 +71,8 @@
       align-items: center;
       gap: 0.5rem;
     }
-    .score-arrow.up {
-      color: green;
-    }
-    .score-arrow.down {
-      color: red;
-    }
+    .score-arrow.up { color: green; }
+    .score-arrow.down { color: red; }
     .small-print {
       font-size: 0.8rem;
       color: #333;
@@ -87,137 +83,52 @@
   </style>
 </head>
 <body>
-
 <div class="container">
-
-  <!-- Main Headlines -->
   <h1>Policy Receipt Generator</h1>
   <h2 style="font-size: 1rem; font-weight: normal; text-align: center;">
     Make Public Power Visible.<br>
     Generate a Civic Receipt for Any Policy.
   </h2>
 
-  <!-- Input -->
-  <input type="text" id="policyInput" placeholder="Enter a policy or law (e.g. Local Law 97)">
-  <button onclick="generateReceipt()">Generate Receipt</button>
+  <select id="receiptSelector" onchange="loadReceipt(this.value)">
+    <option value="local-law-97">Local Law 97 (NYC)</option>
+    <option value="inflation-reduction-act">Inflation Reduction Act (2022)</option>
+  </select>
 
-<!-- DYNAMIC POLICY RECEIPT UI -->
-<div class="receipt" id="receipt" style="display: block;">
-  <h2 id="policyName"></h2>
-  <div id="summary" style="font-size: 1rem; margin-bottom: 1.5rem;"></div>
+  <div class="receipt" id="receipt">
+    <h2 id="policyName"></h2>
+    <div id="summary" style="font-size: 1rem; margin-bottom: 1.5rem;"></div>
 
-  <div style="margin-bottom: 1.5rem;">
-    <strong>CivHub Score:</strong> 
-    <span id="score" class="score-line"></span>
-  </div>
+    <div style="margin-bottom: 1.5rem;">
+      <strong>CivHub Score:</strong> 
+      <span id="score" class="score-line"></span>
+    </div>
 
-  <div style="margin-bottom: 2rem;">
-    <strong>Impact Breakdown:</strong>
-    <ul id="impactList" style="list-style: none; padding-left: 1rem;"></ul>
-  </div>
+    <div style="margin-bottom: 2rem;">
+      <strong>Impact Breakdown:</strong>
+      <ul id="impactList" style="list-style: none; padding-left: 1rem;"></ul>
+    </div>
 
-  <div style="margin-bottom: 2rem;">
-    <strong>Methodology:</strong>
-    <p id="methodology" style="font-size: 0.9rem; line-height: 1.4;"></p>
-  </div>
+    <div style="margin-bottom: 2rem;">
+      <strong>Methodology:</strong>
+      <p id="methodology" style="font-size: 0.9rem; line-height: 1.4;"></p>
+    </div>
 
-  <div style="margin-bottom: 2rem;">
-    <strong>Disclosures:</strong>
-    <ul id="disclosures" style="font-size: 0.85rem; color: #555;"></ul>
-  </div>
+    <div style="margin-bottom: 2rem;">
+      <strong>Disclosures:</strong>
+      <ul id="disclosures" style="font-size: 0.85rem; color: #555;"></ul>
+    </div>
 
-  <div style="margin-bottom: 2rem;">
-    <strong>Sources:</strong>
-    <ul id="sources" style="font-size: 0.85rem;"></ul>
-  </div>
+    <div style="margin-bottom: 2rem;">
+      <strong>Sources:</strong>
+      <ul id="sources" style="font-size: 0.85rem;"></ul>
+    </div>
 
-  <div style="text-align: center; font-size: 0.85rem; color: #999;">
-    Policy Receipt Generator by <a href="https://civhub.us" target="_blank" style="color: #999; text-decoration: underline;">CivHub</a><br>
-    © 2025 CivHub. All rights reserved.
-  </div>
-</div>
-
-<script>
-const receiptData = {
-  policy_name: "Local Law 97 (NYC)",
-  summary: "Passed in 2019 as part of NYC’s Climate Mobilization Act, Local Law 97 mandates large buildings reduce greenhouse gas emissions by 40% by 2030 and 80% by 2050. This receipt evaluates early environmental data to assess implementation impact.",
-  civhub_score: {
-    score: 76,
-    scale: "-100 to +100",
-    trend: "↑",
-    color: "green"
-  },
-  impact_breakdown: [
-    { category: "🌿 Environmental", insight: "Summer 2023 ozone and PM2.5 levels decreased across key NYC zones (e.g., West Queens, South Crown Heights) compared to historical baselines, signaling early climate co-benefits." },
-    { category: "💰 Economic", insight: "Public records show large-scale retrofits and upgrades supporting NYC green construction employment and demand for high-efficiency systems." },
-    { category: "🏩 Governance", insight: "Linked with existing benchmarking laws (LL84) and city enforcement protocols. Supported by Local Law 97 Implementation Plan 2021." },
-    { category: "🚫 Equity", insight: "Environmental justice groups continue to monitor for displacement and rent pass-through concerns. No confirmed large-scale negative outcomes yet." },
-    { category: "⚡ Social/Behavioral", insight: "Public feedback and awareness remain limited. No current social survey data available in dataset." },
-    { category: "📉 Data Integrity", insight: "Source is NYC Open Data, via government-collected environmental indicators. However, data is periodic and limited to summer seasons." }
-  ],
-  methodology: "Score derived using CivHub’s six-factor policy impact framework (Environmental, Economic, Governance, Equity, Social, and Data Integrity), weighted equally unless otherwise noted. Environmental score primarily driven by reductions in ozone and particulate matter. Subjective elements flagged accordingly.",
-  disclosures: [
-    "Air quality data reflects summer-only readings. Full-year seasonal variance not accounted for.",
-    "Causal attribution between LL97 and air quality changes inferred via proximity, not experimental control.",
-    "Economic impact details are drawn from secondary documents and not directly sourced from CSV inputs.",
-    "Equity, social, and behavioral indicators lack granular demographic tagging."
-  ],
-  sources: [
-    "https://data.cityofnewyork.us/resource/c3uy-2p5r.csv",
-    "NYC Climate Mobilization Act 2019",
-    "Local Law 97 Summary (2023)",
-    "NYC LL97 Implementation Plan (2021)"
-  ]
-};
-
-// Populate DOM
-window.onload = () => {
-  document.getElementById("policyName").textContent = receiptData.policy_name;
-  document.getElementById("summary").textContent = receiptData.summary;
-  document.getElementById("score").innerHTML = `<span style='color:${receiptData.civhub_score.color};'>${receiptData.civhub_score.score} ${receiptData.civhub_score.trend}</span>`;
-
-  const impact = document.getElementById("impactList");
-  receiptData.impact_breakdown.forEach(i => {
-    const li = document.createElement("li");
-    li.innerHTML = `<strong>${i.category}</strong>: ${i.insight}`;
-    impact.appendChild(li);
-  });
-
-  document.getElementById("methodology").textContent = receiptData.methodology;
-
-  const disclosures = document.getElementById("disclosures");
-  receiptData.disclosures.forEach(d => {
-    const li = document.createElement("li");
-    li.textContent = d;
-    disclosures.appendChild(li);
-  });
-
-  const sources = document.getElementById("sources");
-  receiptData.sources.forEach(s => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="#" target="_blank">${s}</a>`;
-    sources.appendChild(li);
-  });
-};
-</script>
-
-
-  <!-- Footer -->
-  <div style="text-align: center; margin-top: 4rem; font-size: 0.8rem; color: #333;">
-    <p style="letter-spacing: 0.1em;">* * * Powered by <a href="https://civhub.us" target="_blank" style="color: black; text-decoration: underline;">CivHub</a> * * *</p>
-    <p style="font-size: 0.7rem; margin-top: 0.5rem;">
+    <div style="text-align: center; font-size: 0.85rem; color: #999;">
+      Policy Receipt Generator by <a href="https://civhub.us" target="_blank" style="color: #999; text-decoration: underline;">CivHub</a><br>
       © 2025 CivHub. All rights reserved.
-    </p>
+    </div>
   </div>
-
 </div>
-
-<script>
-  function generateReceipt() {
-    const receipt = document.getElementById('receipt');
-    receipt.style.display = 'block';
-  }
-</script>
-
 </body>
 </html>
