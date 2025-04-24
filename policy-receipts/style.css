@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 480px;
+  width: 100%;
+  padding: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  font-family: monospace;
+  font-size: 1rem;
+  border: none;
+  background: #111;
+  color: white;
+  border: 1px dashed white;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  font-family: monospace;
+  font-size: 1rem;
+  background: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.receipt {
+  margin-top: 4rem;
+  background: #111;
+  padding: 2rem;
+  border: 1px solid white;
+  border-bottom: 12px solid white;
+  clip-path: polygon(0 0, 100% 0, 100% 97%, 95% 100%, 90% 97%, 85% 100%, 80% 97%, 75% 100%, 70% 97%, 65% 100%, 60% 97%, 55% 100%, 50% 97%, 45% 100%, 40% 97%, 35% 100%, 30% 97%, 25% 100%, 20% 97%, 15% 100%, 10% 97%, 5% 100%, 0 97%);
+  display: none;
+}
+
+.small-print {
+  font-size: 0.8rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 3rem;
+  max-width: 600px;
+}
+
+.ascii-art {
+  font-family: monospace;
+  font-size: 0.7rem;
+  color: #fff;
+  text-align: center;
+  margin-top: 4rem;
+}
