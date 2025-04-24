@@ -77,6 +77,25 @@ const receipts = {
     sources: ["https://aqs.epa.gov/aqsweb/airdata/download_files.html"]
   },
 
+  "air_quality_westchester_2023": {
+    policy_name: "Air Quality (PM2.5) in Westchester – 2023",
+    summary: "EPA daily monitoring data in 2023 shows no PM2.5 exceedances in Westchester County. This suggests strong air quality outcomes — or potential limitations in local sensor coverage.",
+    civhub_score: { score: 75, trend: "→", color: "green" },
+    impact_breakdown: [
+      { category: "🌿 Environmental", insight: "No PM2.5 exceedances recorded in 2023 based on EPA daily site data for Westchester County." },
+      { category: "⚠️ Data Integrity", insight: "Monitoring stations may not cover all zones; low exceedances could reflect data gaps, not only clean air." }
+    ],
+    methodology: "PM2.5 exceedances are defined by daily averages >35 µg/m³. Data sourced from EPA AQS daily observations across Westchester monitoring sites.",
+    disclosures: [
+      "Not all ZIP codes in Westchester are covered by EPA monitoring stations.",
+      "Sensor downtime or calibration windows may impact daily coverage.",
+      "Receipt assumes all reported data is from validated sources via EPA open datasets."
+    ],
+    sources: [
+      "https://aqs.epa.gov/aqsweb/airdata/daily_88101_2023.zip"
+    ]
+  },
+
   "contracts_scarsdale": {
     policy_name: "Federal Contracts in Scarsdale (2024)",
     summary: "A snapshot of federal contract spending to entities in the Scarsdale ZIP area (10583) during fiscal year 2024.",
