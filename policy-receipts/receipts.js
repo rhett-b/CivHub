@@ -31,7 +31,7 @@ const receipts = {
     ]
   },
   
-  "zoning_nyc_2023": {
+  "zoning-nyc-2023": {
   policy_name: "Residential Zoning Restrictions in NYC",
   summary: "New York City's zoning laws designate approximately 15% of residential land exclusively for single-family detached homes. This zoning approach limits housing density and diversity, contributing to affordability challenges and restricting the development of multifamily housing options.",
   civhub_score: {
