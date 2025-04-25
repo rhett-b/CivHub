@@ -30,7 +30,34 @@ const receipts = {
       "NYC LL97 Implementation Plan (2021)"
     ]
   },
-
+  
+  "zoning_nyc_2023": {
+  policy_name: "Residential Zoning Restrictions in NYC",
+  summary: "New York City's zoning laws designate approximately 15% of residential land exclusively for single-family detached homes. This zoning approach limits housing density and diversity, contributing to affordability challenges and restricting the development of multifamily housing options.",
+  civhub_score: {
+    score: 45,
+    scale: "-100 to +100",
+    trend: "→",
+    color: "orange"
+  },
+  impact_breakdown: [
+    { category: "🏘️ Housing Availability", insight: "Approximately 15% of NYC's residential land is zoned for single-family homes, limiting opportunities for higher-density housing development." },
+    { category: "💰 Economic Impact", insight: "Restrictive zoning contributes to higher housing costs by limiting supply, exacerbating affordability issues for residents." },
+    { category: "🌍 Environmental Considerations", insight: "Lower-density housing patterns can lead to increased per capita energy consumption and reduced efficiency in public transportation usage." },
+    { category: "⚖️ Equity Implications", insight: "Single-family zoning has historical ties to exclusionary practices, potentially perpetuating socioeconomic and racial segregation." },
+    { category: "📈 Development Trends", insight: "Recent initiatives, such as the 'City of Yes' plan, aim to reform zoning laws to allow for more diverse housing options, including accessory dwelling units and multifamily residences." }
+  ],
+  methodology: "This score is derived from an analysis of NYC's zoning maps and housing data, focusing on the proportion of land designated for single-family use and its implications on housing availability and affordability.",
+  disclosures: [
+    "Data reflects zoning designations as of the latest available records; ongoing reforms may alter these figures.",
+    "The analysis does not account for all factors influencing housing affordability, such as market dynamics or construction costs."
+  ],
+  sources: [
+    "https://www.nyc.gov/content/planning/pages/zoning/zoning-districts-guide/residence-districts",
+    "https://rpa.org/news/lab/our-region-needs-more-housing-end-single-family-zoning",
+    "https://data.cityofnewyork.us/City-Government/NYC_2019_R1-R2_1-family-zoning/m3ap-hpr8"
+  ]
+}
   "inflation reduction act": {
     policy_name: "Inflation Reduction Act (2022)",
     summary: "The IRA includes over $370 billion in energy and climate investments designed to cut emissions and create jobs. It’s the largest federal investment in climate action in U.S. history.",
