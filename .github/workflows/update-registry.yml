@@ -1,5 +1,8 @@
 name: Update Civic Protocol Registry Index
 
+permissions:
+  contents: write
+
 on:
   push:
     paths:
