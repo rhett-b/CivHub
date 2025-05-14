@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Civic Protocol v1",
+  "type": "object",
+  "required": ["protocol_id", "title", "summary", "category", "steps"],
+  "properties": {
+    "protocol_id": { "type": "string" },
+    "title": { "type": "string" },
+    "summary": { "type": "string" },
+    "category": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["step_number", "label", "description"],
+        "properties": {
+          "step_number": { "type": "integer" },
+          "label": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    },
+    "use_cases": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "inputs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "outputs": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "participant_roles": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "dependencies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "recommended_tools": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "references": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["label", "url"],
+        "properties": {
+          "label": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "forks": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "license": { "type": "string" }
+  }
+}
