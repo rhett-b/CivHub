@@ -1,0 +1,66 @@
+{
+  "protocol_id": "quadratic_voting_v1",
+  "title": "Quadratic Voting",
+  "version": "1.0.0",
+  "author": "CivHub",
+  "created": "2025-05-14",
+  "last_updated": "2025-05-14",
+  "category": ["Voting Systems", "Resource Allocation"],
+  "summary": "A voting system that allows participants to allocate votes to express the strength of their preferences, using quadratic cost scaling to prevent vote hoarding.",
+  "use_cases": [
+    "Community budget allocation",
+    "Grant distribution processes",
+    "Civic tech feature prioritization"
+  ],
+  "inputs": [
+    "List of options or proposals",
+    "Total voting credits per participant"
+  ],
+  "outputs": [
+    "Weighted results based on credit allocation",
+    "Participation metrics"
+  ],
+  "steps": [
+    {
+      "step_number": 1,
+      "label": "Proposal Setup",
+      "description": "Administrators define a set of options for participants to vote on."
+    },
+    {
+      "step_number": 2,
+      "label": "Credit Allocation",
+      "description": "Each participant is given a fixed number of voting credits (e.g., 100)."
+    },
+    {
+      "step_number": 3,
+      "label": "Quadratic Voting",
+      "description": "Participants allocate credits to options. The cost of each additional vote increases quadratically (e.g., 1 vote = 1 credit, 2 votes = 4 credits, etc.)."
+    },
+    {
+      "step_number": 4,
+      "label": "Tally and Reporting",
+      "description": "Votes are tallied. Results reflect preference strength while penalizing dominance."
+    }
+  ],
+  "participant_roles": [
+    "Eligible voters",
+    "Administrators"
+  ],
+  "dependencies": [
+    "Secure identity or session system",
+    "Voting interface that supports quadratic cost logic"
+  ],
+  "recommended_tools": [
+    "Gitcoin Grants QF Module",
+    "Snapshot",
+    "CivHub Voting Plugin (forthcoming)"
+  ],
+  "references": [
+    {
+      "label": "RadicalxChange Quadratic Voting Guide",
+      "url": "https://www.radicalxchange.org/concepts/quadratic-voting/"
+    }
+  ],
+  "forks": [],
+  "license": "CC BY-SA 4.0"
+}
