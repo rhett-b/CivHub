@@ -1,0 +1,14 @@
+[
+  {
+    "protocol_id": "participatory_budgeting_simple_v1",
+    "title": "Participatory Budgeting – Simple Tier",
+    "version": "1.0.0",
+    "summary": "A civic process in which residents vote on how to allocate a portion of a public budget across community-proposed projects.",
+    "category": ["Fiscal Policy", "Deliberation"],
+    "created": "2025-05-14",
+    "last_updated": "2025-05-14",
+    "author": "CivHub",
+    "file_path": "protocols/participatory_budgeting_simple_v1.json",
+    "license": "CC BY-SA 4.0"
+  }
+]
