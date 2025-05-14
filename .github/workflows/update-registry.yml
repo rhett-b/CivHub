@@ -24,6 +24,9 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install dependencies
+        run: pip install jsonschema
+
       - name: Run registry update script
         working-directory: ${{ github.workspace }}
         run: python3 update_registry_index.py
