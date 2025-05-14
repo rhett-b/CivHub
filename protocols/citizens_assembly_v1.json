@@ -1,0 +1,71 @@
+{
+  "protocol_id": "citizens_assembly_v1",
+  "title": "Citizens' Assembly Protocol",
+  "version": "1.0.0",
+  "author": "CivHub",
+  "created": "2025-05-14",
+  "last_updated": "2025-05-14",
+  "category": ["Deliberative Democracy", "Consensus Processes"],
+  "summary": "A randomly selected group of citizens is convened to deliberate on a policy issue and produce recommendations based on structured discussion and expert input.",
+  "use_cases": [
+    "Constitutional reform processes",
+    "Ethics regulation or electoral reform",
+    "Local planning or land use issues"
+  ],
+  "inputs": [
+    "Deliberation topic",
+    "Randomized participant pool",
+    "Expert witness roster"
+  ],
+  "outputs": [
+    "Assembly recommendations or report",
+    "Participant feedback",
+    "Public commentary log"
+  ],
+  "steps": [
+    {
+      "step_number": 1,
+      "label": "Topic Selection",
+      "description": "An issue of public concern is selected by policymakers or petitioned by the public."
+    },
+    {
+      "step_number": 2,
+      "label": "Participant Selection",
+      "description": "A statistically representative group of residents is selected using random sampling."
+    },
+    {
+      "step_number": 3,
+      "label": "Deliberation Period",
+      "description": "Participants meet over several sessions, guided by facilitators and informed by expert presentations."
+    },
+    {
+      "step_number": 4,
+      "label": "Recommendation Drafting",
+      "description": "Participants produce a public report with recommendations or proposed actions."
+    }
+  ],
+  "participant_roles": [
+    "Selected residents",
+    "Facilitators",
+    "Experts / witnesses",
+    "Observers / media"
+  ],
+  "dependencies": [
+    "Facilitation team",
+    "Deliberation venue or platform",
+    "Access to independent expert input"
+  ],
+  "recommended_tools": [
+    "Deliberation Day Toolkit",
+    "Pol.is",
+    "CivHub Consensus API (forthcoming)"
+  ],
+  "references": [
+    {
+      "label": "OECD Deliberative Democracy Hub",
+      "url": "https://www.oecd.org/gov/open-government/deliberative-democracy.htm"
+    }
+  ],
+  "forks": [],
+  "license": "CC BY-SA 4.0"
+}
