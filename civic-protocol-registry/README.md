@@ -22,10 +22,10 @@ A civic protocol is a repeatable process for democratic decision-making, partici
 ## 📁 Repo Structure
 
 /civic-protocol-registry
-├── /schemas                    ← JSON schema for validating protocol structure
-├── /protocols                  ← Individual civic protocol files
-├── /docs                       ← Overview, future guides, and meta docs
-└── registry_index.json         ← List of active protocols with basic metadata
+├── /schemas ← JSON schema for validating protocol structure
+├── /protocols ← Individual civic protocol files
+├── /docs ← Overview, future guides, and meta docs
+└── registry_index.json ← List of active protocols with basic metadata
 
 ---
 
