@@ -22,6 +22,7 @@ jobs:
           python-version: "3.x"
 
       - name: Run registry update script
+        working-directory: ${{ github.workspace }}
         run: python3 update_registry_index.py
 
       - name: Commit and push if changed
