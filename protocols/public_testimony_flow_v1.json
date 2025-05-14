@@ -5,7 +5,10 @@
   "author": "CivHub",
   "created": "2025-05-14",
   "last_updated": "2025-05-14",
-  "category": ["Legislative Engagement", "Civic Feedback"],
+  "category": [
+    "Legislative Engagement",
+    "Civic Feedback"
+  ],
   "summary": "A structured process for collecting, managing, and surfacing public input on pending legislation in an accessible and transparent format.",
   "use_cases": [
     "State or municipal legislative hearings",
@@ -67,5 +70,6 @@
     }
   ],
   "forks": [],
-  "license": "CC BY-SA 4.0"
+  "license": "CC BY-SA 4.0",
+  "schema_version": "v1"
 }

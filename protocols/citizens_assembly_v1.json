@@ -5,7 +5,10 @@
   "author": "CivHub",
   "created": "2025-05-14",
   "last_updated": "2025-05-14",
-  "category": ["Deliberative Democracy", "Consensus Processes"],
+  "category": [
+    "Deliberative Democracy",
+    "Consensus Processes"
+  ],
   "summary": "A randomly selected group of citizens is convened to deliberate on a policy issue and produce recommendations based on structured discussion and expert input.",
   "use_cases": [
     "Constitutional reform processes",
@@ -67,6 +70,6 @@
     }
   ],
   "forks": [],
-  "license": "CC BY-SA 4.0"
+  "license": "CC BY-SA 4.0",
+  "schema_version": "v1"
 }
- 

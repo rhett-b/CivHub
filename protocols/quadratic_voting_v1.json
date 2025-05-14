@@ -5,7 +5,10 @@
   "author": "CivHub",
   "created": "2025-05-14",
   "last_updated": "2025-05-14",
-  "category": ["Voting Systems", "Resource Allocation"],
+  "category": [
+    "Voting Systems",
+    "Resource Allocation"
+  ],
   "summary": "A voting system that allows participants to allocate votes to express the strength of their preferences, using quadratic cost scaling to prevent vote hoarding.",
   "use_cases": [
     "Community budget allocation",
@@ -62,8 +65,6 @@
     }
   ],
   "forks": [],
-  "license": "CC BY-SA 4.0"
+  "license": "CC BY-SA 4.0",
+  "schema_version": "v1"
 }
- 
- 
- 
