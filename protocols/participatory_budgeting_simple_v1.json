@@ -1,75 +1,27 @@
 {
-  "protocol_id": "participatory_budgeting_simple_v1",
-  "title": "Participatory Budgeting \u2013 Simple Tier",
-  "version": "1.0.0",
+  "title": "Participatory Budgeting – Simple Tier",
+  "category": ["Fiscal Policy", "Deliberation"],
   "author": "CivHub",
-  "created": "2025-05-14",
+  "schema": "v1.0",
   "last_updated": "2025-05-14",
-  "category": [
-    "Fiscal Policy",
-    "Deliberation"
-  ],
-  "summary": "A civic process in which residents vote on how to allocate a portion of a public budget across community-proposed projects.",
-  "use_cases": [
-    "City council budget engagement",
-    "School board funding decisions",
-    "Neighborhood-level participatory planning"
-  ],
-  "inputs": [
-    "Total available budget",
-    "List of proposed projects",
-    "Voter eligibility list or rules"
-  ],
-  "outputs": [
-    "Ranked list of selected projects",
-    "Funding allocations",
-    "Public participation metrics"
-  ],
+  "description": "A basic participatory budgeting model where community members decide how to allocate a portion of public funds.",
   "steps": [
-    {
-      "step_number": 1,
-      "label": "Proposal Collection",
-      "description": "Residents or organizations submit project proposals for public funding."
-    },
-    {
-      "step_number": 2,
-      "label": "Eligibility Review",
-      "description": "Review board screens proposals for budget fit and feasibility."
-    },
-    {
-      "step_number": 3,
-      "label": "Public Voting",
-      "description": "Eligible residents vote on approved proposals, typically using ranked-choice or cumulative voting."
-    },
-    {
-      "step_number": 4,
-      "label": "Allocation & Reporting",
-      "description": "Winning proposals receive funding and implementation schedules are published."
-    }
+    "Announcement of available funds and timeline.",
+    "Proposal collection from community members.",
+    "Review and feasibility assessment of proposals.",
+    "Community voting on eligible proposals.",
+    "Implementation and public reporting."
   ],
   "participant_roles": [
-    "Residents / voters",
-    "Proposal submitters",
-    "Review board / administrators"
-  ],
-  "dependencies": [
-    "Open budget dataset",
-    "Voter registration info (optional)",
-    "Voting mechanism (in-person or digital)"
+    "Community residents",
+    "Facilitators",
+    "Budget officials",
+    "Proposal reviewers"
   ],
   "recommended_tools": [
-    "OpenCollective",
-    "Pol.is",
-    "BallotReady",
-    "CivHub Receipt Generator"
-  ],
-  "references": [
-    {
-      "label": "NYC Civic Engagement Commission",
-      "url": "https://www.participate.nyc.gov"
-    }
-  ],
-  "forks": [],
-  "license": "CC BY-SA 4.0",
-  "schema_version": "v1"
+    "Digital voting platforms (e.g. Decide Madrid)",
+    "Proposal submission portals",
+    "Budget visualizers",
+    "Town hall or forum software"
+  ]
 }
