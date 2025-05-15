@@ -1,10 +1,11 @@
 {
   "protocol_id": "citizens_assembly_v1",
-  "title": "Citizens' Assembly Protocol",
-  "version": "1.0.0",
+  "title": "Public Testimony Flow",
+  "category": ["Legislative Engagement", "Civic Feedback"],
   "author": "CivHub",
-  "created": "2025-05-14",
+  "schema": "v1.0",
   "last_updated": "2025-05-14",
+  "description": "A structured process for collecting and integrating public testimony into legislative decision-making."
   "category": [
     "Deliberative Democracy",
     "Consensus Processes"
