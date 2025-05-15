@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CivHub Protocol Registry</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Civic Protocol Registry</h1>
+    <p class="subtitle">Powered by <a href="https://www.civhub.us/" target="_blank">CivHub</a> | <a href="#" id="about-link">About This Tool</a></p>
+    <p class="description">A library of modular, open civic protocols — structured coordination methods you can fork, remix, and use to design democratic processes. Built for technologists, policymakers, and communities alike.</p>
+  </header>
+
+  <section id="filters">
+    <!-- Filtering options will go here -->
+  </section>
+
+  <main id="protocols">
+    <p>Loading civic protocols...</p>
+  </main>
+
+  <script src="script.js"></script>
+
+  <section id="submit-protocol" style="padding: 1rem; text-align: center;">
+  <h2>Submit a Protocol</h2>
+  <p>Have a civic coordination method worth sharing? We're building a public registry of modular, remixable governance protocols — and we'd love to include yours.</p>
+  <p>Please use the form below to suggest a protocol for inclusion:</p>
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLSerNWIsGxtyPs5wFPdIQdnmpphiB3wEFRm1qwAWf8kCzUetSg/viewform?usp=header" target="_blank" style="display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; background-color: black; color: white; text-decoration: none; border-radius: 4px;">Submit a Protocol</a>
+</section>
+
+  <footer>
+  <p>&copy; 2025 CivHub. All civic protocols are released under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>.</p>
+</footer>
+
+
+<div id="about-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:9999;">
+  <div style="background:white; margin:5% auto; padding:2rem; max-width:600px; border-radius:8px; position:relative;">
+    <button onclick="document.getElementById('about-modal').style.display='none'" style="position:absolute; top:10px; right:15px; background:none; border:none; font-size:1.2rem;">&times;</button>
+   <h2>About the Civic Protocol Registry</h2>
+    <p>The Civic Protocol Registry is an open public directory of civic processes—reimagined as protocols. It is designed to help communities and institutions discover, adopt, and adapt participatory frameworks for governance, deliberation, budgeting, voting, and beyond.</p>
+
+    <h3>What is a Civic Protocol?</h3>
+    <p>A civic protocol is a structured method or workflow for collective decision-making. Examples include participatory budgeting, citizens’ assemblies, and quadratic voting. Each protocol entry in this registry includes core steps, inputs and outputs, participant roles, tools, and example use cases.</p>
+
+    <h3>Why It Matters</h3>
+    <ul>
+      <li><strong>Discoverable:</strong> Great democratic processes shouldn't remain trapped in PDFs, academic papers, or pilot programs. This registry makes civic innovations visible and reusable.</li>
+      <li><strong>Composable:</strong> Protocols are described in a modular JSON format, so developers and researchers can integrate them into civic tech tools, policy platforms, or simulations.</li>
+      <li><strong>Forkable:</strong> Just like open-source software, each protocol can be adapted and improved to fit local needs. Users are encouraged to fork protocols and propose improvements.</li>
+    </ul>
+
+    <h3>Who Should Use This?</h3>
+    <ul>
+      <li><strong>Local governments</strong> exploring participatory tools</li>
+      <li><strong>Civic technologists</strong> building apps and infrastructure</li>
+      <li><strong>Researchers</strong> studying democratic design</li>
+      <li><strong>Communities</strong> seeking better ways to self-govern</li>
+    </ul>
+
+    <h3>How to Use It</h3>
+    <ol>
+      <li><strong>Browse:</strong> Use filters and search to find relevant protocols.</li>
+      <li><strong>Explore:</strong> Click any protocol card to see full details and download the schema.</li>
+      <li><strong>Contribute:</strong> Use our Google Form to suggest a new protocol or adaptation.</li>
+    </ol>
+
+    <h3>Why It’s Built This Way</h3>
+    <p>This tool is part of a larger effort by CivHub to prototype “governance infrastructure” for the 21st century—designing systems that are legible, participatory, and adaptable. We believe better governance is a design problem, and protocols are a powerful design unit.</p>
+    <p style="font-size: 0.9rem; color: #888; margin-top: 2rem;">© 2025 CivHub. Licensed under CC BY-SA 4.0.</p>
+  </div>
+
+</div>
+<script>
+document.getElementById('about-link').addEventListener('click', function(e) {
+  e.preventDefault();
+  document.getElementById('about-modal').style.display = 'block';
+});
+</script>
+
+</body>
+</html>
